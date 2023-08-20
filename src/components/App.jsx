@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ContactForm } from './contact_form/ContactForm';
 import { ContactList } from './contact_list/ContactList';
 import { Filter } from './filter/Filter';
+import { Heading1, Heading2 } from './app-style';
 
 export class App extends Component {
   state = {
@@ -45,10 +46,10 @@ export class App extends Component {
     const filteredContacts = this.getFilteredContacts();
     return (
       <div>
-        <h1>Phonebook</h1>
+        <Heading1>Phonebook</Heading1>
         <ContactForm addNewContact={this.addNewContact} />
 
-        <h2>Contacts</h2>
+        <Heading2>Contacts</Heading2>
         <Filter
           handleFilterChange={this.handleFilterChange}
           filter={this.state.filter}

@@ -1,15 +1,16 @@
 import React from 'react';
+import { FilterContainer, Label, Input } from './filter-style';
 
 export const Filter = ({ handleFilterChange, filter }) => {
   return (
-    <div>
-      <label>Find contact by name</label>
-      <input
+    <FilterContainer>
+      <Label>Find contact by name</Label>
+      <Input
         type="text"
         name="Find contact by name"
         value={filter}
         onChange={handleFilterChange}
       />
-    </div>
+    </FilterContainer>
   );
 };
